@@ -13,16 +13,11 @@ function toggle_menu(name)
 function teste(){
     const check = document.getElementById("setting-glass")
     const sidenav = document.getElementById("sidenav")
-    const container = document.querySelectorAll("container")
+    const container = document.querySelector("container")
+    const bodys = document.getElementById("body")
     if(check.checked == true){
-        sidenav.style.backdropFilter = "blur(0px)"
-        sidenav.style.background = "rgba(32, 32, 32)"
-        container.style.backdropFilter = "blur(0px)"
-        container.style.background = "rgba(32, 32, 32)"
+        bodys.classList.add("active")
     }else{
-        sidenav.style.backdropFilter = "blur(10px)"
-        sidenav.style.background = "rgba(255, 255, 255, 0.2)"
-        container.style.backdropFilter = "blur(10px)"
-        container.style.background = "rgba(255, 255, 255, 0.2)"
+        bodys.classList.remove("active")
     }
 }
