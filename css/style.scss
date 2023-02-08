@@ -42,7 +42,7 @@ body{
     background: rgba(255, 255, 255, $a);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 0px solid rgba(255, 255, 255, 0.3);
 }
 
 .sidenav{
@@ -102,7 +102,7 @@ body{
             font-size: 2vh;
             padding: 0.7vh 2vh 0.7vh 0;
             text-transform: uppercase;
-            margin-left: 2vh;
+            margin-left: 2.15vh;
             font-weight: 500;
             text-decoration: none;
             width: 100%;
@@ -159,7 +159,76 @@ body{
     display: flex;
 }
 
-/* CHECKBOX: CONFIGURAÇÕES */
+/* CLIENTES E FORNECEDORES */
+
+#cadastro{
+
+    .flex{
+        padding-top: 3vh;
+        display: flex;
+
+        .search{
+            @include glass;
+            display: flex;
+            border-radius: 1vh;
+            width: 35vh;
+
+            input{
+                outline: none;
+                background: transparent;
+                border: 0;
+                width: 100%;
+                align-items: center;
+                padding-left: 1vh;
+                font-size: 1.75vh;
+
+                &::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+                }
+            }
+
+            button{
+                background: transparent;
+                border: none;
+                aspect-ratio: 1/1;
+                cursor: pointer;
+                transition: 0.2s;
+                font-size: 2.5vh;
+
+                &:hover{
+                    background-color: #ffffff10;
+                }
+            }
+        }
+
+        .add{
+            display: flex;
+            background-color: #E20E46;
+            border: 0;
+            border-radius: .8vh;
+            font-size: 1.6vh;
+            font-weight: 700;
+            align-items: center;
+            justify-content: center;
+            padding: 1vh;
+            transition: 0.2s;
+            cursor: pointer;
+            margin-left: auto;
+
+            &:hover{
+                background-color: #cf0c40;
+            }
+
+            a{
+                font-size: 1.8vh;
+                font-weight: 700;
+                padding-right: 0.5vh;
+            }
+        }
+    }
+}
+
+/* CONFIGURAÇÕES: CHECKBOX */
 
 .config{
     display: flex;
@@ -167,8 +236,8 @@ body{
 
     .switch {
         position: relative;
-        width: 6vh;
-        height: 3.3vh;
+        width: 6.2vh;
+        height: 3.35vh;
     
         input { 
             display: none;
@@ -200,7 +269,7 @@ body{
             background-color: #EBB02A;
     
             &:before{
-                transform: translateX(2.2vh);
+                transform: translateX(2.4vh);
             }
         }
         
@@ -224,17 +293,18 @@ body{
 /* DARK MODE */
 
 body.active{
+    
     .circle-1, .circle-2{
         opacity: 0;
     }
 
     .sidenav{
-        background: rgb(61, 61, 61);;
-        backdrop-filter: blur(00px);
+        background: #252731;
+        backdrop-filter: blur(0px);
     }
 
     .container{
-        background: rgb(61, 61, 61);;
-        backdrop-filter: blur(00px);
+        background: #252731;
+        backdrop-filter: blur(0px);
     }
 }

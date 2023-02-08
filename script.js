@@ -10,14 +10,12 @@ function toggle_menu(name)
     document.querySelector(`[name=${name}]`).classList.add("active")
 }
 
-function teste(){
+function dark_mode(){
     const check = document.getElementById("setting-glass")
-    const sidenav = document.getElementById("sidenav")
-    const container = document.querySelector("container")
-    const bodys = document.getElementById("body")
+    const body = document.getElementById("body")
     if(check.checked == true){
-        bodys.classList.add("active")
+        body.classList.add("active")
     }else{
-        bodys.classList.remove("active")
+        body.classList.remove("active")
     }
 }

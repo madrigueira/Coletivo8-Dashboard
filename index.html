@@ -10,73 +10,60 @@
 </head>
 <body id="body">
 
+    <!-- Círculos coloridos do background -->
     <div class="circle-1"></div>
     <div class="circle-2"></div>
     
+    <!-- Menu lateral da dashboard -->
     <div class="sidenav" id="sidenav">
-        <button class="btn-nav btn-menu" onclick="sidenav()"><p>⤬</p></button>
+        <button class="btn-nav btn-menu" onclick="sidenav()"><p>⤬</p></button> <!-- Botão de expandir e retrair o menu -->
         <div class="div-btn">
-            <button class="btn-nav material-symbols-rounded active" onclick="toggle_menu(this.name)" name="home">home</button>
-            <a onclick="toggle_menu(this.name)" name="home">home</a>
+            <button class="btn-nav material-symbols-rounded" onclick="toggle_menu(this.name)" name="home">home</button> <!-- Botão de navegação p/ mudar pags da dashboard -->
+            <a onclick="toggle_menu(this.name)" name="home">home</a> <!-- Título do botão de navegação (só aparece com tela expandida)  -->
         </div>
         <div class="div-btn">
-            <button class="btn-nav material-symbols-rounded" onclick="toggle_menu(this.name)" name="cadastro">add_circle</button>
+            <button class="btn-nav material-symbols-rounded active" onclick="toggle_menu(this.name)" name="cadastro">add_circle</button>
             <a onclick="toggle_menu(this.name)" name="cadastro">clientes e fornecedores</a>
         </div>
-        <div class="div-btn">
-            <button class="btn-nav material-symbols-rounded" onclick="toggle_menu(this.name)" name="contas">monetization_on</button>
-            <a onclick="toggle_menu(this.name)" name="contas">contas</a>
-        </div>
-        <div class="div-btn">
-            <button class="btn-nav material-symbols-rounded" onclick="toggle_menu(this.name)" name="clientes">folder_copy</button>
-            <a onclick="toggle_menu(this.name)" name="clientes">clientes</a>
-        </div>
         <div class="div-btn btn-config">
-            <button class="btn-nav material-symbols-rounded" onclick="toggle_menu(this.name)" name="config">settings</button>
-            <a onclick="toggle_menu(this.name)" name="config">configurações</a>
+            <button class="btn-nav material-symbols-rounded" onclick="toggle_menu(this.name)" name="configuracoes">settings</button>
+            <a onclick="toggle_menu(this.name)" name="configuracoes">configurações</a>
         </div>
     </div>
 
 
-
+    <!-- Página: Home -->
     <container class="container" id="home">
         <h1>Home</h1>
     </container>
 
 
-
-    <container class="container" id="cadastro">
+    <!-- Página: Clientes e Fornecedores -->
+    <container class="container active" id="cadastro">
         <h1>Clientes e Fornecedores</h1>
+        <div class="flex">
+            <div class="search">
+                <input type="search">
+                <button class="material-symbols-rounded">search</button>
+            </div>
+            <button class="add"><a class="material-symbols-rounded">add</a> Novo Cadastro</button>
+        </div>
     </container>
 
 
-
-    <container class="container" id="contas">
-        <h1>Contas</h1>
-    </container>
-
-
-
-    <container class="container" id="clientes">
-        <h1>Clientes</h1>
-    </container>
-
-
-
-    <container class="container active" id="config">
+    <!-- Página: Configurações -->
+    <container class="container" id="configuracoes">
         <h1>Configurações</h1>
         <h3>Visual</h3>
         <hr>
-        <div class="config">
+        <div class="config"> <!-- Botão Liga/Desliga Darkmode -->
             <label class="switch">
-                <input type="checkbox" id="setting-glass" onclick="teste()">
+                <input type="checkbox" id="setting-glass" onclick="dark_mode()">
                 <span class="slider round"></span>
             </label>
             <p>Modo Escuro</p>
         </div>
-
     </container>
-
     
 
     <script src="script.js"></script>

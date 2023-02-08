@@ -45,7 +45,7 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
   display: flex;
   padding: 1vh 2vh;
   width: 10vh;
@@ -60,7 +60,7 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   padding: 1px 5px;
   margin: 2vh 0;
@@ -99,7 +99,7 @@ body {
   font-size: 2vh;
   padding: 0.7vh 2vh 0.7vh 0;
   text-transform: uppercase;
-  margin-left: 2vh;
+  margin-left: 2.15vh;
   font-weight: 500;
   text-decoration: none;
   width: 100%;
@@ -124,7 +124,7 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
   display: none;
   flex-direction: column;
   border-radius: 12px;
@@ -150,15 +150,76 @@ body {
   display: flex;
 }
 
-/* CHECKBOX: CONFIGURAÇÕES */
+/* CLIENTES E FORNECEDORES */
+#cadastro .flex {
+  padding-top: 3vh;
+  display: flex;
+}
+#cadastro .flex .search {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  border-radius: 1vh;
+  width: 35vh;
+}
+#cadastro .flex .search input {
+  outline: none;
+  background: transparent;
+  border: 0;
+  width: 100%;
+  align-items: center;
+  padding-left: 1vh;
+  font-size: 1.75vh;
+}
+#cadastro .flex .search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+#cadastro .flex .search button {
+  background: transparent;
+  border: none;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 2.5vh;
+}
+#cadastro .flex .search button:hover {
+  background-color: rgba(255, 255, 255, 0.062745098);
+}
+#cadastro .flex .add {
+  display: flex;
+  background-color: #E20E46;
+  border: 0;
+  border-radius: 0.8vh;
+  font-size: 1.6vh;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-left: auto;
+}
+#cadastro .flex .add:hover {
+  background-color: #cf0c40;
+}
+#cadastro .flex .add a {
+  font-size: 1.8vh;
+  font-weight: 700;
+  padding-right: 0.5vh;
+}
+
+/* CONFIGURAÇÕES: CHECKBOX */
 .config {
   display: flex;
   padding-top: 4vh;
 }
 .config .switch {
   position: relative;
-  width: 6vh;
-  height: 3.3vh;
+  width: 6.2vh;
+  height: 3.35vh;
 }
 .config .switch input {
   display: none;
@@ -187,7 +248,7 @@ body {
   background-color: #EBB02A;
 }
 .config .switch input:checked + .slider:before {
-  transform: translateX(2.2vh);
+  transform: translateX(2.4vh);
 }
 .config .switch .slider.round {
   border-radius: 34px;
@@ -207,12 +268,12 @@ body.active .circle-1, body.active .circle-2 {
   opacity: 0;
 }
 body.active .sidenav {
-  background: rgb(61, 61, 61);
+  background: #252731;
   -webkit-backdrop-filter: blur(0px);
           backdrop-filter: blur(0px);
 }
 body.active .container {
-  background: rgb(61, 61, 61);
+  background: #252731;
   -webkit-backdrop-filter: blur(0px);
           backdrop-filter: blur(0px);
 }/*# sourceMappingURL=style.css.map */
