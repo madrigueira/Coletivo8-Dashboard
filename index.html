@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <title>Dashboard</title>
 </head>
-<body id="body">
+<body id="body" class="active">
 
     <!-- Círculos coloridos do background -->
     <div class="circle-1"></div>
@@ -45,6 +45,29 @@
             <div class="search">
                 <input type="search">
                 <button class="material-symbols-rounded">search</button>
+            </div>
+            <div class="filter">
+                <button class="material-symbols-rounded" onclick="toggle_filter()">filter_alt</button>
+                <div class="filter-box active" id="filter-box">
+                    <h5>Filtro</h5>
+                    <p>Situação</p>
+                    <select name="select">
+                        <option value="valor1">Valor 1</option>
+                        <option value="valor2">Valor 2</option>
+                        <option value="valor3">Valor 3</option>
+                    </select>
+                    <p>Tipo de Cadastro</p>
+                    <select name="select">
+                        <option value="valor1">Valor 1</option>
+                        <option value="valor2">Valor 2</option>
+                        <option value="valor3">Valor 3</option>
+                    </select>
+                    <p>Vendedor</p>
+                    <input type="text">
+                    <p>Telefone / Celular</p>
+                    <input type="text">
+                    <button>Filtrar</button>
+                </div>
             </div>
             <button class="add"><a class="material-symbols-rounded">add</a> Novo Cadastro</button>
         </div>

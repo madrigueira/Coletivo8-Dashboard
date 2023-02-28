@@ -171,7 +171,7 @@ body{
             @include glass;
             display: flex;
             border-radius: 1vh;
-            width: 35vh;
+            width: 36vh;
 
             input{
                 outline: none;
@@ -197,6 +197,102 @@ body{
 
                 &:hover{
                     background-color: #ffffff10;
+                }
+            }
+        }
+
+        .filter{
+            display: flex;
+            padding-left: 1.5vh;
+            z-index: 111;
+
+            button{
+                @include glass;
+                aspect-ratio: 1/1;
+                border: 0;
+                border-radius: 1vh;
+                cursor: pointer;
+                transition: 0.2s;
+                font-size: 2.5vh;
+                z-index: 1111;
+
+                &:hover{
+                    background-color: #ffffff46;
+                }
+            }
+
+            .filter-box{
+                opacity: 0;
+                pointer-events: none;
+                @include glass;
+                padding: 2.5vh 1.5vh;
+                margin: 6vh 0 0 -12.7vh;
+                position: fixed;
+                width: 30vh;
+                border-radius: 1vh;
+                font-size: 2vh;
+                transition: 0.3s;
+                display: flex;
+                flex-direction: column;
+
+                &:before {
+                    content: '';
+                    left: 13vh;
+                    position: absolute;
+                    bottom: 100%;
+                    border: 2vh solid transparent;
+                    border-bottom-color: #ffffff33;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(10px);
+                }
+
+                &.active{
+                    opacity: 1;
+                    pointer-events: all;
+                    margin-top: 7vh;
+                }
+
+                h5{
+                    font-size: 2.4vh;
+                    padding-bottom: 1.2vh;
+                }
+
+                p{
+                    font-size: 1.8vh;
+                    padding-bottom: .5vh;
+                }
+
+                @mixin input_filter(){
+                    width: 100%;
+                    color: #fff;
+                    height: 4vh;
+                    border: .3vh solid #fff;
+                    border-radius: 1vh;
+                    background-color: transparent;
+                    padding: 0 1vh;
+                    outline: none;
+                    margin-bottom: 1.5vh;
+                    font-size: 1.6vh;
+                }
+
+                select{
+                    @include input_filter;
+                    cursor: pointer;
+
+                    option{
+                        color: #000;
+                    }
+                }
+
+                input{
+                    @include input_filter;
+                }
+
+                button{
+                    font-size: 2vh;
+                    padding: .8vh 2vh;
+                    aspect-ratio: 0;
+                    margin: 1vh auto 0 auto;
                 }
             }
         }

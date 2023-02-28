@@ -163,7 +163,7 @@ body {
   border-right: 0px solid rgba(255, 255, 255, 0.3);
   display: flex;
   border-radius: 1vh;
-  width: 35vh;
+  width: 36vh;
 }
 #cadastro .flex .search input {
   outline: none;
@@ -187,6 +187,104 @@ body {
 }
 #cadastro .flex .search button:hover {
   background-color: rgba(255, 255, 255, 0.062745098);
+}
+#cadastro .flex .filter {
+  display: flex;
+  padding-left: 1.5vh;
+  z-index: 111;
+}
+#cadastro .flex .filter button {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
+  aspect-ratio: 1/1;
+  border: 0;
+  border-radius: 1vh;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 2.5vh;
+  z-index: 1111;
+}
+#cadastro .flex .filter button:hover {
+  background-color: rgba(255, 255, 255, 0.2745098039);
+}
+#cadastro .flex .filter .filter-box {
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
+  padding: 2.5vh 1.5vh;
+  margin: 6vh 0 0 -12.7vh;
+  position: fixed;
+  width: 30vh;
+  border-radius: 1vh;
+  font-size: 2vh;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+#cadastro .flex .filter .filter-box:before {
+  content: "";
+  left: 13vh;
+  position: absolute;
+  bottom: 100%;
+  border: 2vh solid transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#cadastro .flex .filter .filter-box.active {
+  opacity: 1;
+  pointer-events: all;
+  margin-top: 7vh;
+}
+#cadastro .flex .filter .filter-box h5 {
+  font-size: 2.4vh;
+  padding-bottom: 1.2vh;
+}
+#cadastro .flex .filter .filter-box p {
+  font-size: 1.8vh;
+  padding-bottom: 0.5vh;
+}
+#cadastro .flex .filter .filter-box select {
+  width: 100%;
+  color: #fff;
+  height: 4vh;
+  border: 0.3vh solid #fff;
+  border-radius: 1vh;
+  background-color: transparent;
+  padding: 0 1vh;
+  outline: none;
+  margin-bottom: 1.5vh;
+  font-size: 1.6vh;
+  cursor: pointer;
+}
+#cadastro .flex .filter .filter-box select option {
+  color: #000;
+}
+#cadastro .flex .filter .filter-box input {
+  width: 100%;
+  color: #fff;
+  height: 4vh;
+  border: 0.3vh solid #fff;
+  border-radius: 1vh;
+  background-color: transparent;
+  padding: 0 1vh;
+  outline: none;
+  margin-bottom: 1.5vh;
+  font-size: 1.6vh;
+}
+#cadastro .flex .filter .filter-box button {
+  font-size: 2vh;
+  padding: 0.8vh 2vh;
+  aspect-ratio: 0;
+  margin: 1vh auto 0 auto;
 }
 #cadastro .flex .add {
   display: flex;
